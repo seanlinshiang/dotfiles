@@ -122,7 +122,7 @@ alias la='exa -lBha --git --color-scale'
 alias c="clear"
 alias cd="z"
 
-alias labvpn="sudo openvpn --config /home/seanlin/Vpns/IRL_vpn.ovpn --auth-user-pass /home/seanlin/Vpns/IRL_auth.txt"
+alias labvpn="sudo openvpn --config $HOME/Vpns/IRL_vpn.ovpn --auth-user-pass $HOME/Vpns/IRL_auth.txt"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
