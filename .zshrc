@@ -4,10 +4,18 @@ export ZSH="$HOME/.oh-my-zsh"
 # Set name of the theme to load 
 ZSH_THEME="oxide"
 
+# Optimize nvm
+zstyle ':omz:plugins:nvm' lazy yes
+
 plugins=(
 	git
 	zsh-autosuggestions
+    zsh-vi-mode
+    nvm
 )
+
+# For zsh vi mode 
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 
 source $ZSH/oh-my-zsh.sh
 
@@ -33,11 +41,6 @@ source <(fzf --zsh)
 
 # zoxide
 eval "$(zoxide init zsh)"
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 # Run on shell start
