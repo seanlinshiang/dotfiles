@@ -2,7 +2,11 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load 
-ZSH_THEME="oxide"
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+    ZSH_THEME="oxide-ssh"
+else
+    ZSH_THEME="oxide"
+fi
 
 plugins=(
 	git
@@ -20,7 +24,7 @@ alias ls="exa"
 alias ll='exa -lbGF --git'
 alias la='exa -lBha --git --color-scale'
 alias c="clear"
-alias cd="z"
+# alias cd="z"
 
 # CLI tools
 # Openvpn for lab
@@ -36,7 +40,7 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 source <(fzf --zsh)
 
 # zoxide
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
 
 # fnm
 FNM_PATH="/home/seanlin/.local/share/fnm"
