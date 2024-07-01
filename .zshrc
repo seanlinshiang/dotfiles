@@ -4,14 +4,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # Set name of the theme to load 
 ZSH_THEME="oxide"
 
-# Optimize nvm
-zstyle ':omz:plugins:nvm' lazy yes
-
 plugins=(
 	git
 	zsh-autosuggestions
     zsh-vi-mode
-    nvm
 )
 
 # For zsh vi mode 
@@ -42,6 +38,13 @@ source <(fzf --zsh)
 # zoxide
 eval "$(zoxide init zsh)"
 
+# fnm
+FNM_PATH="/home/seanlin/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/seanlin/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
 
 # Run on shell start
 fastfetch
+
