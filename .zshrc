@@ -23,6 +23,13 @@ alias cd="z"
 
 # CLI tools
 
+# fnm
+FNM_PATH="/Users/shiang/Library/Application Support/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/Users/shiang/Library/Application Support/fnm:$PATH"
+  eval "`fnm env`"
+fi
+
 # fzf
 source <(fzf --zsh)
 
