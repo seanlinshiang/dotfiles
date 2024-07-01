@@ -24,7 +24,7 @@ alias ls="exa"
 alias ll='exa -lbGF --git'
 alias la='exa -lBha --git --color-scale'
 alias c="clear"
-# alias cd="z"
+alias cd="z"
 
 # CLI tools
 # Openvpn for lab
@@ -40,7 +40,7 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 source <(fzf --zsh)
 
 # zoxide
-# eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh)"
 
 # fnm
 FNM_PATH="/home/seanlin/.local/share/fnm"
