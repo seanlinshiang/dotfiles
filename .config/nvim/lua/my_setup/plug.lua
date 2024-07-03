@@ -1,5 +1,3 @@
-local call = vim.call
-local cmd = vim.cmd
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
