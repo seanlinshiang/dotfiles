@@ -25,11 +25,7 @@ alias cd="z"
 # CLI tools
 
 # fnm
-FNM_PATH="/Users/shiang/Library/Application Support/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="/Users/shiang/Library/Application Support/fnm:$PATH"
-  eval "`fnm env`"
-fi
+eval "$(fnm env --use-on-cd)"
 
 # fzf
 source <(fzf --zsh)
