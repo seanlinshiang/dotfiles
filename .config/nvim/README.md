@@ -3,9 +3,9 @@ Inspired by [The primeagen setup](https://www.youtube.com/watch?v=w7i4amO_zaE)
 
 
 Prerequisite: 
-1. Install ripgrep, npm.
-2. Install packer.nvim
-3. Open nvim and run :PackerSync first.
+1. Install ripgrep, node.
+2. `chmod +x ./install.sh`
+3. `./install.sh`
 
 
 issue:
