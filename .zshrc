@@ -21,6 +21,8 @@ alias ll='ls -l'
 alias la='ls -A'
 alias c="clear"
 alias cd="z"
+alias nv="nvim"
+alias lg="lazygit"
 
 # CLI tools
 
