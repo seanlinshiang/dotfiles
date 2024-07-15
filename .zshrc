@@ -26,6 +26,8 @@ alias ll='exa -lbGF --git'
 alias la='exa -lBha --git --color-scale'
 alias c="clear"
 alias cd="z"
+alias nv="nvim"
+alias lg="lazygit"
 
 # CLI tools
 # Openvpn for lab
@@ -50,6 +52,9 @@ if [ -d "$FNM_PATH" ]; then
   eval "`fnm env`"
 fi
 
+# spicetify
+export PATH=$PATH:/home/seanlin/.spicetify
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/seanlin/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -67,4 +72,3 @@ unset __conda_setup
 
 # Run on shell start
 fastfetch
-
