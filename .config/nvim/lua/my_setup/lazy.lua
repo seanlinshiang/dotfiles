@@ -52,5 +52,9 @@ return require('lazy').setup({
 
     {'lewis6991/gitsigns.nvim'},
 
-    {'mg979/vim-visual-multi', lazy=false}
+    {'mg979/vim-visual-multi', lazy=false},
+
+    {'f-person/git-blame.nvim'},
+
+    {'m4xshen/autoclose.nvim'}
 })
