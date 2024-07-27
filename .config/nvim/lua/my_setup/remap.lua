@@ -12,6 +12,11 @@ vim.keymap.set("n", "<leader>P", [["+P]])
 vim.keymap.set("n", "<leader>t", vim.cmd.Neotree)
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
 
+vim.keymap.set("n", "<leader>o", "o<Esc>")
+vim.keymap.set("n", "<leader>O", "O<Esc>")
+
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- vim.keymap.set("n", "<leader>j", function ()
 --     vim.cmd("sp | term") 
 -- end)
