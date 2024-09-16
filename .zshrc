@@ -25,9 +25,6 @@ alias nv="nvim"
 alias lg="lazygit"
 
 # CLI tools
-# Openvpn for lab
-alias labvpn="sudo openvpn --config $HOME/Vpns/IRL_vpn.ovpn --auth-user-pass $HOME/Vpns/IRL_auth.txt"
-
 # Brew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
