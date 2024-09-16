@@ -41,25 +41,25 @@ source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 
 # fnm
-FNM_PATH="/home/seanlin/.local/share/fnm"
+FNM_PATH="/home/seanlinshiang/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/seanlin/.local/share/fnm:$PATH"
+  export PATH="/home/seanlinshiang/.local/share/fnm:$PATH"
   eval "`fnm env`"
 fi
 
 # spicetify
-export PATH=$PATH:/home/seanlin/.spicetify
+export PATH=$PATH:/home/seanlinshiang/.spicetify
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/seanlin/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/seanlinshiang/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/seanlin/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/seanlin/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/seanlinshiang/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/seanlinshiang/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/seanlin/miniconda3/bin:$PATH"
+        export PATH="/home/seanlinshiang/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
