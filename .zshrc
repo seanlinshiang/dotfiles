@@ -16,9 +16,9 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
-alias ls="exa"
-alias ll='exa -lbGF --git'
-alias la='exa -lBha --git --color-scale'
+alias ls="eza"
+alias ll='eza -lbGF --git'
+alias la='eza -lBha --git --color-scale'
 alias c="clear"
 alias cd="z"
 alias nv="nvim"
@@ -38,9 +38,9 @@ source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 
 # fnm
-FNM_PATH="/home/seanlinshiang/.local/share/fnm"
+FNM_PATH="/home/sean/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/seanlinshiang/.local/share/fnm:$PATH"
+  export PATH="/home/sean/.local/share/fnm:$PATH"
   eval "`fnm env`"
 fi
 
