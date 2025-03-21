@@ -45,7 +45,7 @@ if [ -d "$FNM_PATH" ]; then
 fi
 
 # spicetify
-export PATH=$PATH:/home/seanlinshiang/.spicetify
+export PATH=$PATH:/home/sean/.spicetify
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
