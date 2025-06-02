@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Line Chat
+Comment=Line Chat
+Exec=flatpak run io.github.ungoogled_software.ungoogled_chromium --app="chrome-extension://ophjlpahpchlmihnnnihgmmeilfjmjjc/index.html"
+Icon=/home/sean/CustomIcons/line-icon.png
+Path=
+Terminal=false
+StartupNotify=false
