@@ -23,8 +23,11 @@ return require('lazy').setup({
 	},
 
 	{ 'rose-pine/neovim', name = 'rose-pine' },
+    { 'loctvl842/monokai-pro.nvim' },
 
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+
+    { 'echasnovski/mini.splitjoin', version = false },
 
 	{'mbbill/undotree'},
 
