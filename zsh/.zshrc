@@ -15,6 +15,10 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# zsh vi mode
+bindkey -v
+bindkey -M viins 'jk' vi-cmd-mode
+
 # Aliases
 alias ls="eza"
 alias ll='eza -lbGF --git'
