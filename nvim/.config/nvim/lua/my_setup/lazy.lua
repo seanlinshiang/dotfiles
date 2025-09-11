@@ -57,7 +57,5 @@ return require('lazy').setup({
 
     {'mg979/vim-visual-multi', lazy=false},
 
-    {'f-person/git-blame.nvim'},
-
     {'m4xshen/autoclose.nvim'}
 })
