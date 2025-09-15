@@ -15,6 +15,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# add .local/bin to path
+export PATH="$HOME/.local/bin:$PATH"
+
 # zsh vi mode
 bindkey -v
 bindkey -M viins 'jk' vi-cmd-mode
