@@ -27,6 +27,8 @@ return require('lazy').setup({
 
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
+    { 'echasnovski/mini.splitjoin', version = false },
+
 	{'mbbill/undotree'},
 
 	{'tpope/vim-fugitive'},
@@ -54,8 +56,6 @@ return require('lazy').setup({
     {'lewis6991/gitsigns.nvim'},
 
     {'mg979/vim-visual-multi', lazy=false},
-
-    {'f-person/git-blame.nvim'},
 
     {'m4xshen/autoclose.nvim'}
 })

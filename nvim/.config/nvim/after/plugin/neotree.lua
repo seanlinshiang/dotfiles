@@ -1,13 +1,13 @@
-  require("neo-tree").setup({
-        close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
-        window = {
-          position = "left",
-          width = 33,
-          mapping_options = {
+require("neo-tree").setup({
+    close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
+    window = {
+        position = "left",
+        width = 33,
+        mapping_options = {
             noremap = true,
             nowait = true,
-          },
-          mappings = {
+        },
+        mappings = {
             ["<2-LeftMouse>"] = "open",
             ["<cr>"] = "open",
             ["<esc>"] = "cancel", -- close preview or floating neo-tree window
@@ -19,10 +19,10 @@
             ["z"] = "close_all_nodes",
             ["Z"] = "expand_all_nodes",
             ["a"] = { 
-              "add",
-              config = {
-                show_path = "none" -- "none", "relative", "absolute"
-              }
+                "add",
+                config = {
+                    show_path = "none" -- "none", "relative", "absolute"
+                }
             },
             ["A"] = "add_directory", -- also accepts the optional config.show_path option like "add". this also supports BASH style brace expansion.
             ["d"] = "delete",
@@ -37,24 +37,23 @@
             ["?"] = "show_help",
             ["<"] = "prev_source",
             [">"] = "next_source",
-          }
-        },
-        filesystem = {
-          filtered_items = {
+        }
+    },
+    filesystem = {
+        filtered_items = {
             visible = true, -- when true, they will just be displayed differently than normal items
             hide_dotfiles = true,
             hide_gitignored = true,
             hide_hidden = false, -- only works on Windows for hidden files/directories
-          },
         },
-        event_handlers = {
-          {
+    },
+    event_handlers = {
+        {
             event = "file_opened",
             handler = function(file_path) 
                 require("neo-tree.command").execute({ action = "close" })
             end
-          },
         },
-      })
+    },
+})
 
-      vim.cmd.Neotree()
