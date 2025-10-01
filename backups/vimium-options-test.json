@@ -1,0 +1,21 @@
+{
+  "keyMappings": "# Insert your preferred key mappings here.\nmap o Vomnibar.activateInNewTab\nmap J nextTab\nmap K previousTab\nunmap `\nunmap m\nmap gX closeOtherTabs\nunmap p",
+  "newTabUrl": "https://google.com",
+  "ignoreKeyboardLayout": true,
+  "searchEngines": "w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\ny: https://www.youtube.com/results?search_query=%s Youtube\nb: https://search.bilibili.com/all?keyword=%s&order=pubdate Bilibili\nr: https://www.reddit.com/search/?q=%s Reddit\nkf: https://www.reddit.com/r/kpopfap/search/?q=%s&type=posts&sort=new RedditKF",
+  "settingsVersion": "2.3",
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "https?://mail.google.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://leetcode.com/problems/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://sudoku.coach/*"
+    }
+  ]
+}
