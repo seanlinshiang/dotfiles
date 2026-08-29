@@ -55,27 +55,22 @@ fi
 export PATH=$PATH:/home/sean/.spicetify
 
 # Lazy-load conda: initialize only when conda is first used
-_conda_lazy_init() {
-    # Run original conda init setup
+conda() {
+    unset -f conda
     __conda_setup="$('/home/sean/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
     if [ $? -eq 0 ]; then
         eval "$__conda_setup"
-    elif [ -f "/home/sean/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/sean/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/sean/miniconda3/bin:$PATH"
+        if [ -f "/home/sean/miniconda3/etc/profile.d/conda.sh" ]; then
+            . "/home/sean/miniconda3/etc/profile.d/conda.sh"
+        else
+            export PATH="/home/sean/miniconda3/bin:$PATH"
+        fi
     fi
     unset __conda_setup
-
-    # Unset the placeholder function so the real command runs next time
-    unfunction conda
     conda "$@"
 }
 
-# Define conda as a placeholder function
-function conda() {
-    _conda_lazy_init "$@"
-}
 
 function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
