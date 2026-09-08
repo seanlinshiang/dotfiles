@@ -1,4 +1,4 @@
-#History options
+# History options
 HISTFILE=~/.zsh_history
 HISTSIZE=50000
 SAVEHIST=50000
@@ -9,6 +9,7 @@ setopt HIST_IGNORE_SPACE      # Don't record commands starting with a space
 setopt HIST_SAVE_NO_DUPS      # Don't write duplicate entries to file
 setopt HIST_REDUCE_BLANKS     # Remove unnecessary blanks from commands
 setopt EXTENDED_HISTORY       # Save timestamps and duration
+setopt autocd                 # change dir without cd
 
 # Set name of the theme to load 
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
