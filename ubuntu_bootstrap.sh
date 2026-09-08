@@ -1,6 +1,8 @@
 sudo apt update && sudo apt upgrade
 sudo apt install zsh tmux stow htop vim 7zip ncdu build-essential
 chsh -s $(which zsh)
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install fastfetch fzf eza fnm lazygit neovim zoxide
 
 echo "\n\n-----flatpak-----"
