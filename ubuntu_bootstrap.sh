@@ -62,5 +62,8 @@ else
     echo "Kitty terminal is already installed."
 fi
 
+section "stowing everything"
+stow -v2 fonts kitty nvim zsh
+
 section "Reboot"
 gnome-session-quit --reboot
