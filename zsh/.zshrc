@@ -1,19 +1,24 @@
-# Oh my zsh
-export ZSH="$HOME/.oh-my-zsh"
+#History options
+HISTFILE=~/.zsh_history
+HISTSIZE=50000
+SAVEHIST=50000
+
+setopt SHARE_HISTORY          # Share history across all sessions in real-time
+setopt HIST_IGNORE_ALL_DUPS   # Remove older duplicate entries
+setopt HIST_IGNORE_SPACE      # Don't record commands starting with a space
+setopt HIST_SAVE_NO_DUPS      # Don't write duplicate entries to file
+setopt HIST_REDUCE_BLANKS     # Remove unnecessary blanks from commands
+setopt EXTENDED_HISTORY       # Save timestamps and duration
 
 # Set name of the theme to load 
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-    ZSH_THEME="oxide-ssh"
+    source $HOME/.zsh/themes/oxide-ssh.zsh-theme
 else
-    ZSH_THEME="oxide"
+    source $HOME/.zsh/themes/oxide.zsh-theme
 fi
 
-plugins=(
-	git
-	zsh-autosuggestions
-)
-
-source $ZSH/oh-my-zsh.sh
+# auto suggestions for zsh
+source $HOME/.zsh/plugins/zsh-autosuggestions.zsh
 
 # add .local/bin to path
 export PATH="$HOME/.local/bin:$PATH"
@@ -35,9 +40,6 @@ alias lg="lazygit"
 # Brew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# nvim path
-export PATH="$PATH:/opt/nvim-linux64/bin"
-
 # fzf
 source <(fzf --zsh)
 
@@ -45,26 +47,23 @@ source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 
 # fnm
-FNM_PATH="/home/sean/.local/share/fnm"
+FNM_PATH="$HOME/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/sean/.local/share/fnm:$PATH"
+  export PATH="$HOME/.local/share/fnm:$PATH"
   eval "`fnm env`"
 fi
 
-# spicetify
-export PATH=$PATH:/home/sean/.spicetify
-
 # Lazy-load conda: initialize only when conda is first used
-conda() {
+function conda() {
     unset -f conda
-    __conda_setup="$('/home/sean/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+    __conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
     if [ $? -eq 0 ]; then
         eval "$__conda_setup"
     else
-        if [ -f "/home/sean/miniconda3/etc/profile.d/conda.sh" ]; then
-            . "/home/sean/miniconda3/etc/profile.d/conda.sh"
+        if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+            . "$HOME/miniconda3/etc/profile.d/conda.sh"
         else
-            export PATH="/home/sean/miniconda3/bin:$PATH"
+            export PATH="$HOME/miniconda3/bin:$PATH"
         fi
     fi
     unset __conda_setup
